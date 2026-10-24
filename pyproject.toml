@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "galgame-remaster-kit"
+version = "0.1.0"
+description = "Galgame remaster toolkit: archive, CJK glyph, and display A/B research"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "galgame-remaster-kit contributors" }]
+license = { text = "MIT" }
+keywords = [
+  "galgame",
+  "visual-novel",
+  "reverse-engineering",
+  "deflate",
+  "cjk",
+  "font-coverage",
+  "image-quality",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia :: Graphics",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: System :: Archiving",
+]
+dependencies = ["Pillow>=10.1"]
+
+[project.scripts]
+vnremaster = "vnremaster.__main__:main"
+
+[tool.setuptools]
+packages = ["vnremaster"]
+
+[tool.setuptools.package-data]
+vnremaster = ["py.typed"]

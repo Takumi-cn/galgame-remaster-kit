@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Test/demo output
+demo_out/
+pipeline_out/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Never commit game or media artifacts
+*.pac
+*.dat
+*.bin
+*.exe
+*.dll
+*.ttf
+*.otf
+*.ttc
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.mp3
+*.ogg
+*.wav
+*.flac
+*.mp4
+*.mkv
+*.zip
+*.7z
+*.rar
+*.bak
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
