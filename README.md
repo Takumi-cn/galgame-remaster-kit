@@ -1,5 +1,7 @@
 # galgame-remaster-kit
 
+[![tests](https://github.com/Takumi-cn/galgame-remaster-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/Takumi-cn/galgame-remaster-kit/actions/workflows/tests.yml)
+
 > **中文简介**：一套面向老视觉小说（Galgame）研究的通用工具链：PAC 归档等长重打包、CJK 字形覆盖审计、Windows 窗口采集与画质 A/B 度量。仓库只含代码、文档和合成示例，不含任何游戏资源、汉化文本、截图或补丁。
 
 Small, dependency-light tools for **studying and improving legacy galgames
@@ -266,10 +268,11 @@ The suite has 70+ deterministic tests. It covers exact-size recompression
 preservation, diff/stats, property-style random archives, synthetic cmap
 formats 4 and 12 (including the glyph-array path), glyph audit and map
 planning, image metrics, diff heatmaps, comparison-sheet geometry, window
-filter logic, and the CLI. A ready-to-use GitHub Actions workflow is included
-as [`docs/ci-workflow.yml`](docs/ci-workflow.yml); copy it to
-`.github/workflows/tests.yml` to enable the Ubuntu/Windows 3.10–3.13 matrix
-and the wheel build.
+filter logic, and the CLI. CI runs on Ubuntu and Windows with Python
+3.10–3.13, then builds and installs the wheel. The active workflow is
+[`.github/workflows/tests.yml`](.github/workflows/tests.yml);
+[`docs/ci-workflow.yml`](docs/ci-workflow.yml) is a copy you can reuse in
+another repository.
 
 ## Documentation
 

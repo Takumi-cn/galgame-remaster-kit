@@ -28,21 +28,13 @@ Only `.py`, `.md`, `.json`, `.toml`, `.yml`, `LICENSE`, `.gitignore`, and the
 empty `vnremaster/py.typed` marker should appear. There should be no `.pac`,
 image, font, executable, archive, or backup file.
 
-## 2. Enable CI (optional but recommended)
+## 2. CI
 
-The workflow is stored at `docs/ci-workflow.yml` so it is not active by
-default. To enable it:
-
-```bash
-mkdir -p .github/workflows
-cp docs/ci-workflow.yml .github/workflows/tests.yml
-git add .github/workflows/tests.yml
-git commit -m "Enable GitHub Actions workflow"
-git push
-```
-
-The pushing account needs the `workflow` OAuth scope. Without it, GitHub
-rejects workflow files with a 404/403 response.
+CI is active via `.github/workflows/tests.yml` (Ubuntu + Windows, Python
+3.10–3.13, wheel build). `docs/ci-workflow.yml` is a reusable copy for another
+repository. If you edit the active workflow, the account that pushes it needs
+the `workflow` OAuth scope; without it, GitHub rejects the file with a 404/403
+response.
 
 ## 3. Create the repository
 
