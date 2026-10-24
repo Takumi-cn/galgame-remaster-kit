@@ -266,8 +266,10 @@ The suite has 70+ deterministic tests. It covers exact-size recompression
 preservation, diff/stats, property-style random archives, synthetic cmap
 formats 4 and 12 (including the glyph-array path), glyph audit and map
 planning, image metrics, diff heatmaps, comparison-sheet geometry, window
-filter logic, and the CLI. CI runs on Ubuntu and Windows with Python
-3.10–3.13, then builds and installs the wheel.
+filter logic, and the CLI. A ready-to-use GitHub Actions workflow is included
+as [`docs/ci-workflow.yml`](docs/ci-workflow.yml); copy it to
+`.github/workflows/tests.yml` to enable the Ubuntu/Windows 3.10–3.13 matrix
+and the wheel build.
 
 ## Documentation
 

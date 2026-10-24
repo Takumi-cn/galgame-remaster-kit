@@ -28,7 +28,23 @@ Only `.py`, `.md`, `.json`, `.toml`, `.yml`, `LICENSE`, `.gitignore`, and the
 empty `vnremaster/py.typed` marker should appear. There should be no `.pac`,
 image, font, executable, archive, or backup file.
 
-## 2. Create the repository
+## 2. Enable CI (optional but recommended)
+
+The workflow is stored at `docs/ci-workflow.yml` so it is not active by
+default. To enable it:
+
+```bash
+mkdir -p .github/workflows
+cp docs/ci-workflow.yml .github/workflows/tests.yml
+git add .github/workflows/tests.yml
+git commit -m "Enable GitHub Actions workflow"
+git push
+```
+
+The pushing account needs the `workflow` OAuth scope. Without it, GitHub
+rejects workflow files with a 404/403 response.
+
+## 3. Create the repository
 
 ```bash
 cd galgame-remaster-kit
